@@ -1,1 +1,21 @@
+$theme-colors: (
+  'primary': #8c17b5,
+  'info': #be63e3,
+  'success': #4caf50,
+  'warning': #ff7a00,
+  'danger': #f44336
+) !default;
+
+@import 'buttons/bootcamp';
+
 @import '~bootstrap/scss/bootstrap';
+
+@import 'buttons/gradients';
+@import 'buttons/plastic';
+
+body {
+  min-height: 100vh;
+}
+footer {
+  background-color: $gray-400;
+}

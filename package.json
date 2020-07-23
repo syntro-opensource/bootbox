@@ -4,6 +4,7 @@
   "description": "A set of leightweight modifications for Bootstrap components",
   "main": "index.js",
   "scripts": {
+    "watch": "webpack --config webpack.config.js --watch",
     "build": "webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

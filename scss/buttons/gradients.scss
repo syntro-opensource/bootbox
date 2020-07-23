@@ -1,0 +1,10 @@
+//
+// Add gradient styles
+//
+@import '../mixins/buttons';
+
+@each $color, $value in $theme-colors {
+  .btn-gradient-#{$color} {
+    @include button-gradient-variant($value);
+  }
+}

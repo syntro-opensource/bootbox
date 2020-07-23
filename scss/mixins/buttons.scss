@@ -1,0 +1,52 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+$button-gradient-deg: 135deg;
+
+@mixin button-gradient-variant($background, $hover-background: darken($background, 7.5%), $active-background: darken($background, 10%)) {
+  color: color-yiq($background);
+  @include gradient-directional(lighten($background,15%),$background,$button-gradient-deg);
+  border: 0;
+
+  @include hover() {
+    color: color-yiq($hover-background);
+    @include gradient-directional(lighten($hover-background,15%),$hover-background,$button-gradient-deg);
+    border: 0;
+    background-position: -50%;
+  }
+
+  &:focus,
+  &.focus {
+    color: color-yiq($hover-background);
+    @include gradient-directional(lighten($hover-background,15%),$hover-background,$button-gradient-deg);
+    border: 0;
+    // Avoid using mixin so we can pass custom focus shadow properly
+    box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $background, 15%), .5);
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    color: color-yiq($background);
+    background-color: $background;
+    border: 0;
+    background-image: none;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: color-yiq($active-background);
+    @include gradient-directional(lighten($active-background,15%),$active-background,$button-gradient-deg);
+    // @if $enable-gradients {
+    //   background-image: none; // Remove the gradient for the pressed/active state
+    // }
+    border: 0;
+
+    &:focus {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $background, 15%), .5);
+    }
+  }
+}
