@@ -106,7 +106,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./js/bootbox.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ripple__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ripple */ \"./js/ripple.js\");\n/* harmony import */ var _ripple__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ripple__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n//# sourceURL=webpack:///./js/bootbox.js?");
+
+/***/ }),
+
+/***/ "./js/ripple.js":
+/*!**********************!*\
+  !*** ./js/ripple.js ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var addRippleEffect = function addRippleEffect(press) {\n  var target = press.target;\n  if (!target.classList.contains('effect-ripple')) return false;\n  var rect = target.getBoundingClientRect();\n  var ripple = target.querySelector('.ripple');\n\n  if (!ripple) {\n    ripple = document.createElement('span');\n    ripple.className = 'ripple';\n    ripple.style.height = ripple.style.width = Math.max(press.target.offsetWidth, target.offsetHeight) + 'px';\n    target.appendChild(ripple);\n  }\n\n  ripple.classList.remove('show');\n  var top = press.pageY - rect.top - ripple.offsetHeight / 2 - window.scrollY;\n  var left = press.pageX - rect.left - ripple.offsetWidth / 2 - window.scrollX;\n  ripple.style.top = top + 'px';\n  ripple.style.left = left + 'px';\n  ripple.classList.add('show');\n  return false;\n};\n\ndocument.addEventListener('click', addRippleEffect, false);\n\n//# sourceURL=webpack:///./js/ripple.js?");
 
 /***/ }),
 

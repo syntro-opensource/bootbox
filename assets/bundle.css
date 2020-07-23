@@ -9909,6 +9909,32 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.effect-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 100%;
+  transform: scale(0);
+  pointer-events: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.ripple.show {
+  animation: ripple 0.75s ease-out;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
 .btn-gradient-primary {
   color: #fff;
   background-image: linear-gradient(135deg, #b733e5, #8c17b5);
@@ -10198,9 +10224,13 @@ h3 {
 }
 
 .btn-plastic.btn-primary,
-.btn-plastic.btn-outline-primary,
 .btn-plastic.btn-gradient-primary {
   border: 0;
+}
+
+.btn-plastic.btn-primary,
+.btn-plastic.btn-outline-primary,
+.btn-plastic.btn-gradient-primary {
   box-shadow: 0 2px 2px 0 rgba(140, 23, 181, 0.14), 0 3px 1px -2px rgba(140, 23, 181, 0.2), 0 1px 5px 0 rgba(140, 23, 181, 0.12);
 }
 .btn-plastic.btn-primary.disabled, .btn-plastic.btn-primary:disabled,
@@ -10219,6 +10249,7 @@ h3 {
 .btn-plastic.btn-gradient-primary:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-primary:active,
 .btn-plastic.btn-gradient-primary.active {
+  transition-duration: 0s;
   background-color: #77149a;
   box-shadow: 0 0 0;
 }
@@ -10236,9 +10267,13 @@ h3 {
 }
 
 .btn-plastic.btn-secondary,
-.btn-plastic.btn-outline-secondary,
 .btn-plastic.btn-gradient-secondary {
   border: 0;
+}
+
+.btn-plastic.btn-secondary,
+.btn-plastic.btn-outline-secondary,
+.btn-plastic.btn-gradient-secondary {
   box-shadow: 0 2px 2px 0 rgba(108, 117, 125, 0.14), 0 3px 1px -2px rgba(108, 117, 125, 0.2), 0 1px 5px 0 rgba(108, 117, 125, 0.12);
 }
 .btn-plastic.btn-secondary.disabled, .btn-plastic.btn-secondary:disabled,
@@ -10257,6 +10292,7 @@ h3 {
 .btn-plastic.btn-gradient-secondary:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-secondary:active,
 .btn-plastic.btn-gradient-secondary.active {
+  transition-duration: 0s;
   background-color: #5e666d;
   box-shadow: 0 0 0;
 }
@@ -10274,9 +10310,13 @@ h3 {
 }
 
 .btn-plastic.btn-success,
-.btn-plastic.btn-outline-success,
 .btn-plastic.btn-gradient-success {
   border: 0;
+}
+
+.btn-plastic.btn-success,
+.btn-plastic.btn-outline-success,
+.btn-plastic.btn-gradient-success {
   box-shadow: 0 2px 2px 0 rgba(76, 175, 80, 0.14), 0 3px 1px -2px rgba(76, 175, 80, 0.2), 0 1px 5px 0 rgba(76, 175, 80, 0.12);
 }
 .btn-plastic.btn-success.disabled, .btn-plastic.btn-success:disabled,
@@ -10295,6 +10335,7 @@ h3 {
 .btn-plastic.btn-gradient-success:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-success:active,
 .btn-plastic.btn-gradient-success.active {
+  transition-duration: 0s;
   background-color: #439a46;
   box-shadow: 0 0 0;
 }
@@ -10312,9 +10353,13 @@ h3 {
 }
 
 .btn-plastic.btn-info,
-.btn-plastic.btn-outline-info,
 .btn-plastic.btn-gradient-info {
   border: 0;
+}
+
+.btn-plastic.btn-info,
+.btn-plastic.btn-outline-info,
+.btn-plastic.btn-gradient-info {
   box-shadow: 0 2px 2px 0 rgba(190, 99, 227, 0.14), 0 3px 1px -2px rgba(190, 99, 227, 0.2), 0 1px 5px 0 rgba(190, 99, 227, 0.12);
 }
 .btn-plastic.btn-info.disabled, .btn-plastic.btn-info:disabled,
@@ -10333,6 +10378,7 @@ h3 {
 .btn-plastic.btn-gradient-info:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-info:active,
 .btn-plastic.btn-gradient-info.active {
+  transition-duration: 0s;
   background-color: #b349de;
   box-shadow: 0 0 0;
 }
@@ -10350,9 +10396,13 @@ h3 {
 }
 
 .btn-plastic.btn-warning,
-.btn-plastic.btn-outline-warning,
 .btn-plastic.btn-gradient-warning {
   border: 0;
+}
+
+.btn-plastic.btn-warning,
+.btn-plastic.btn-outline-warning,
+.btn-plastic.btn-gradient-warning {
   box-shadow: 0 2px 2px 0 rgba(255, 122, 0, 0.14), 0 3px 1px -2px rgba(255, 122, 0, 0.2), 0 1px 5px 0 rgba(255, 122, 0, 0.12);
 }
 .btn-plastic.btn-warning.disabled, .btn-plastic.btn-warning:disabled,
@@ -10371,6 +10421,7 @@ h3 {
 .btn-plastic.btn-gradient-warning:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-warning:active,
 .btn-plastic.btn-gradient-warning.active {
+  transition-duration: 0s;
   background-color: #e06b00;
   box-shadow: 0 0 0;
 }
@@ -10388,9 +10439,13 @@ h3 {
 }
 
 .btn-plastic.btn-danger,
-.btn-plastic.btn-outline-danger,
 .btn-plastic.btn-gradient-danger {
   border: 0;
+}
+
+.btn-plastic.btn-danger,
+.btn-plastic.btn-outline-danger,
+.btn-plastic.btn-gradient-danger {
   box-shadow: 0 2px 2px 0 rgba(244, 67, 54, 0.14), 0 3px 1px -2px rgba(244, 67, 54, 0.2), 0 1px 5px 0 rgba(244, 67, 54, 0.12);
 }
 .btn-plastic.btn-danger.disabled, .btn-plastic.btn-danger:disabled,
@@ -10409,6 +10464,7 @@ h3 {
 .btn-plastic.btn-gradient-danger:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-danger:active,
 .btn-plastic.btn-gradient-danger.active {
+  transition-duration: 0s;
   background-color: #f22819;
   box-shadow: 0 0 0;
 }
@@ -10426,9 +10482,13 @@ h3 {
 }
 
 .btn-plastic.btn-light,
-.btn-plastic.btn-outline-light,
 .btn-plastic.btn-gradient-light {
   border: 0;
+}
+
+.btn-plastic.btn-light,
+.btn-plastic.btn-outline-light,
+.btn-plastic.btn-gradient-light {
   box-shadow: 0 2px 2px 0 rgba(248, 249, 250, 0.14), 0 3px 1px -2px rgba(248, 249, 250, 0.2), 0 1px 5px 0 rgba(248, 249, 250, 0.12);
 }
 .btn-plastic.btn-light.disabled, .btn-plastic.btn-light:disabled,
@@ -10447,6 +10507,7 @@ h3 {
 .btn-plastic.btn-gradient-light:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-light:active,
 .btn-plastic.btn-gradient-light.active {
+  transition-duration: 0s;
   background-color: #e6eaed;
   box-shadow: 0 0 0;
 }
@@ -10464,9 +10525,13 @@ h3 {
 }
 
 .btn-plastic.btn-dark,
-.btn-plastic.btn-outline-dark,
 .btn-plastic.btn-gradient-dark {
   border: 0;
+}
+
+.btn-plastic.btn-dark,
+.btn-plastic.btn-outline-dark,
+.btn-plastic.btn-gradient-dark {
   box-shadow: 0 2px 2px 0 rgba(52, 58, 64, 0.14), 0 3px 1px -2px rgba(52, 58, 64, 0.2), 0 1px 5px 0 rgba(52, 58, 64, 0.12);
 }
 .btn-plastic.btn-dark.disabled, .btn-plastic.btn-dark:disabled,
@@ -10485,6 +10550,7 @@ h3 {
 .btn-plastic.btn-gradient-dark:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-dark:active,
 .btn-plastic.btn-gradient-dark.active {
+  transition-duration: 0s;
   background-color: #262b2f;
   box-shadow: 0 0 0;
 }
