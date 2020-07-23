@@ -9909,6 +9909,32 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.effect-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 100%;
+  transform: scale(0);
+  pointer-events: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.ripple.show {
+  animation: ripple 0.75s ease-out;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
 .btn-gradient-primary {
   color: #fff;
   background-image: linear-gradient(135deg, #b733e5, #8c17b5);

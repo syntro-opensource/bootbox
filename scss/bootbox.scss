@@ -10,6 +10,8 @@ $theme-colors: (
 
 @import '~bootstrap/scss/bootstrap';
 
+@import 'ripple';
+
 @import 'buttons/gradients';
 @import 'buttons/plastic';
 
