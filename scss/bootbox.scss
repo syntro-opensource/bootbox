@@ -6,6 +6,11 @@ $theme-colors: (
   'danger': #f44336
 ) !default;
 
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+$font-family-base:   Roboto, $font-family-sans-serif;
+
 @import 'buttons/bootcamp';
 
 @import '~bootstrap/scss/bootstrap';
@@ -20,4 +25,13 @@ body {
 }
 footer {
   background-color: $gray-400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Lato, $font-family-base;
 }
