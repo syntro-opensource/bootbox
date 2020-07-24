@@ -17,4 +17,4 @@ var addRippleEffect = function(press) {
 	ripple.classList.add('show');
 	return false;
 }
-document.addEventListener('click', addRippleEffect, false);
+document.addEventListener('mousedown', addRippleEffect, false);

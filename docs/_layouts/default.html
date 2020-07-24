@@ -8,8 +8,11 @@
     {% include fonts.html %}
   </head>
   <body class="d-flex flex-column">
+    {% include nav.html %}
     <div class="box flex-grow-1">
-      {{ content}}
+      <div class="container mt-3">
+        {{ content}}
+      </div>
     </div>
     {% include footer.html %}
     <script src="{{ "assets/bundle.js" | relative_url }}"></script>

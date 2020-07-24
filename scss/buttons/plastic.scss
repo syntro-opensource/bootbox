@@ -18,7 +18,7 @@
     &:not(:disabled):not(.disabled).active,
     &:active,
     &.active {
-      transition-duration: 0s;
+      transition-duration: .2s;
       background-color: darken($value, 6%);
       box-shadow: 0 0 0;
     }

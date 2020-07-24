@@ -6,7 +6,7 @@
   "scripts": {
     "develop": "npm-run-all --parallel docs-serve watch",
     "docs": "npm-run-all build docs-build",
-    "docs-serve": "bundle exec jekyll s -s docs/ -d temp_docs -o",
+    "docs-serve": "bundle exec jekyll s -s docs/ -d temp_docs -o -l",
     "docs-build": "bundle exec jekyll build -s docs/ -d build",
     "watch": "webpack --config webpack.config.js --watch",
     "build": "webpack --config webpack.config.js",
