@@ -8,7 +8,7 @@ module.exports = {
   // Path and filename of your result bundle.
   // Webpack will bundle all JavaScript into this file
   output: {
-    path: path.resolve(__dirname, 'build/assets'),
+    path: path.resolve(__dirname, 'docs/assets'),
     filename: 'bundle.js'
   },
 
