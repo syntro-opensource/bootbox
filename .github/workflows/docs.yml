@@ -30,6 +30,7 @@ jobs:
         with:
           enable_cache: true
           jekyll_src: docs
+          custom_opts: --baseurl bootbox
 
 
       - name: Deploy 🚀
