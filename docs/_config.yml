@@ -5,3 +5,5 @@ highlighter: none
 collections:
   mods:
     output: true
+  scripts:
+    output: true

@@ -4,7 +4,7 @@ title: "Simple, Reusable Bootstrap Modifications"
 ---
 
 
-# Say hello to Bootbox!
+# Bootbox - extend, adapt and customize Bootstrap
 ---
 
 Bootbox is a collection of leightweight extensions and additions

@@ -6,7 +6,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="Navbar">
+    <div class="collapse navbar-collapse justify-content-end" id="Navbar">
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle {% if page.url contains 'mods' %}active{% endif %}" href="#" id="ComponentDropdownLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -15,6 +15,16 @@
           <div class="dropdown-menu" aria-labelledby="ComponentDropdownLink">
             {% for mod in site.mods %}
               <a class="dropdown-item {% if page.url == mod.url %}active{% endif %}" href="{{ mod.url }}">{{ mod.title }}</a>
+            {% endfor %}
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle {% if page.url contains 'scripts' %}active{% endif %}" href="#" id="ComponentDropdownLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Scripts
+          </a>
+          <div class="dropdown-menu" aria-labelledby="ComponentDropdownLink">
+            {% for script in site.scripts %}
+              <a class="dropdown-item {% if page.url == script.url %}active{% endif %}" href="{{ script.url }}">{{ script.title }}</a>
             {% endfor %}
           </div>
         </li>
