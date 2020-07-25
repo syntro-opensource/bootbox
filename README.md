@@ -18,5 +18,5 @@ To install Bootbox we recommend using webpack as your bundler of choice.
 
 > Installation instructions will follow
 
-Have a look at [the docs](syntro-opensource.github.io/bootbox) to check out the
+Have a look at [the docs](https://syntro-opensource.github.io/bootbox) to check out the
 possibilities.
