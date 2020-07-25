@@ -6,7 +6,22 @@ layout: default
 # Buttons
 ---
 
+```html
+<div class="mx-3">
+  <button class="btn btn-sm btn-primary">small button</button>
+  <button class="btn btn-primary">normal button</button>
+  <button class="btn btn-lg btn-primary">large button</button>
+</div>
+```
 
+
+```js
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});
+```
 <div class="my-3">
   <!-- Bootcamp -->
   <div class="my-4">
@@ -92,8 +107,8 @@ layout: default
     </div>
     <p>This plays nicely with the ripple effect:</p>
     <div class="m-3">
-      <button class="btn btn-plastic btn-primary effect-ripple">Button with ripple effect</button>
-      <button class="btn btn-plastic btn-gradient-primary effect-ripple">Button with ripple effect</button>
+      <button class="btn btn-plastic btn-info effect-ripple">Button with ripple effect</button>
+      <button class="btn btn-plastic btn-gradient-info effect-ripple">Button with ripple effect</button>
     </div>
   </div>
 

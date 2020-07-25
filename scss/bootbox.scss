@@ -1,5 +1,5 @@
 $theme-colors: (
-  'primary': #4b5467,
+  'primary': #2561e0,
   'info': #be63e3,
   'success': #4caf50,
   'warning': #ff7a00,
@@ -34,4 +34,9 @@ h4,
 h5,
 h6 {
   font-family: Lato, $font-family-base;
+}
+
+pre {
+  @extend .shadow-sm;
+  @extend .rounded;
 }
