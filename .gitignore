@@ -1,4 +1,5 @@
 node_modules/
 .jekyll-cache/
 temp_docs/
+docs/assets/
 .DS_Store
