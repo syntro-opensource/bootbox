@@ -1,6 +1,6 @@
 {
   "name": "@syntro-opensource/bootbox",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A set of leightweight modifications for Bootstrap components",
   "main": "index.js",
   "scripts": {
