@@ -14,7 +14,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="ComponentDropdownLink">
             {% for mod in site.mods %}
-              <a class="dropdown-item {% if page.url == mod.url %}active{% endif %}" href="{{ mod.url }}">{{ mod.title }}</a>
+              <a class="dropdown-item {% if page.url == mod.url %}active{% endif %}" href="{{ mod.url | relative_url }}">{{ mod.title }}</a>
             {% endfor %}
           </div>
         </li>
@@ -24,7 +24,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="ComponentDropdownLink">
             {% for script in site.scripts %}
-              <a class="dropdown-item {% if page.url == script.url %}active{% endif %}" href="{{ script.url }}">{{ script.title }}</a>
+              <a class="dropdown-item {% if page.url == script.url %}active{% endif %}" href="{{ script.url | relative_url }}">{{ script.title }}</a>
             {% endfor %}
           </div>
         </li>
