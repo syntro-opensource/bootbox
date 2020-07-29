@@ -24,3 +24,9 @@
     transform: scale(2);
   }
 }
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} > .ripple {
+    background: transparentize(lighten($value, 30%), .6);
+  }
+}

@@ -12,33 +12,6 @@ across the web and customizing them quickly becomes a necessity in every project
 
 Bootbox helps you with this by providing several button modifications.
 
-## Bootcamp
----
-
-We have created a button bootcamp which strengthens buttons visually
-by increasing the padding, therefore making Buttons more impactful:
-
-<div class="mt-3 rounded border p-3">
-  <button class="btn btn-sm btn-primary">small button</button>
-  <button class="btn btn-primary">normal button</button>
-  <button class="btn btn-lg btn-primary">large button</button>
-</div>
-
-```html
-<button class="btn btn-sm btn-primary">small button</button>
-<button class="btn btn-primary">normal button</button>
-<button class="btn btn-lg btn-primary">large button</button>
-```
-
-You can include these changes using the provided bootcamp file:
-```scss
-// -> import bootcamps AFTER bootstrap/scss/variables
-
-@import '~@syntro-opensource/bootbox/scss/buttons/bootcamp';
-
-// -> import bootcamps BEFORE bootstrap/scss/bootstrap
-```
-
 
 ## Gradients
 ---

@@ -1,4 +1,4 @@
-if(process.env.NODE_ENV === 'production') {
+// if(process.env.NODE_ENV === 'production') {
     module.exports = {
         plugins: [
             require('autoprefixer'),
@@ -6,4 +6,4 @@ if(process.env.NODE_ENV === 'production') {
             // More postCSS modules here if needed
         ]
     }
-}
+// }
