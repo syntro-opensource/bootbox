@@ -1,2 +1,2 @@
-import './js/bootbox.js'
-import './scss/bootbox.scss'
+import './js/bootbox.js';
+import './scss/bootbox.scss';
