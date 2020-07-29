@@ -7,7 +7,7 @@
   .btn-plastic.btn-#{$color},
   .btn-plastic.btn-outline-#{$color},
   .btn-plastic.btn-gradient-#{$color} {
-    box-shadow: 0 2px 2px 0 transparentize($value, .86),0 3px 1px -2px transparentize($value, .8),0 1px 5px 0 transparentize($value, .88);
+    box-shadow: 0 2px 2px 0 transparentize($value, .86), 0 3px 1px -2px transparentize($value, .8), 0 1px 5px 0 transparentize($value, .88);
 
     &.disabled,
     &:disabled {
@@ -18,9 +18,9 @@
     &:not(:disabled):not(.disabled).active,
     &:active,
     &.active {
-      transition-duration: .2s;
       background-color: darken($value, 6%);
       box-shadow: 0 0 0;
+      transition-duration: .2s;
     }
 
     &:hover,
@@ -28,7 +28,7 @@
     &:focus,
     &.focus {
       background-color: darken($value, 3%);
-      box-shadow: 0 14px 26px -12px transparentize($value, .58),0 4px 23px 0 rgba(0,0,0,.12),0 8px 10px -5px transparentize($value, .8);
+      box-shadow: 0 14px 26px -12px transparentize($value, .58), 0 4px 23px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px transparentize($value, .8);
     }
   }
 }

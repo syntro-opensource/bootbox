@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
 
@@ -87,8 +88,10 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "bundle.css"
+    }),
+    new StylelintPlugin({
+      fix: true
     })
-
   ],
 
   // Default mode for Webpack is production.

@@ -2,7 +2,7 @@
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
-$button-gradient-deg: 135deg;
+$button-gradient-deg: 135deg !default;
 
 @mixin button-gradient-variant($background, $hover-background: darken($background, 7.5%), $active-background: darken($background, 10%)) {
   color: color-yiq($background);
@@ -11,9 +11,9 @@ $button-gradient-deg: 135deg;
 
   @include hover() {
     color: color-yiq($hover-background);
-    @include gradient-directional(lighten($hover-background,15%),$hover-background,$button-gradient-deg);
-    border: 0;
     background-position: -50%;
+    border: 0;
+    @include gradient-directional(lighten($hover-background,15%),$hover-background,$button-gradient-deg);
   }
 
   &:focus,
@@ -30,8 +30,8 @@ $button-gradient-deg: 135deg;
   &:disabled {
     color: color-yiq($background);
     background-color: $background;
-    border: 0;
     background-image: none;
+    border: 0;
   }
 
   &:not(:disabled):not(.disabled):active,
