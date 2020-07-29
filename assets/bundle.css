@@ -153,7 +153,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -451,6 +451,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
+  font-family: lato, 1rem;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -5625,7 +5626,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5727,7 +5728,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -10030,13 +10031,13 @@ h3 {
 
 .ripple {
   position: absolute;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  pointer-events: none;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 100%;
   transform: scale(0);
-  pointer-events: none;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
 }
 
 .ripple.show {
@@ -10045,8 +10046,8 @@ h3 {
 
 @keyframes ripple {
   to {
-    transform: scale(2);
     opacity: 0;
+    transform: scale(2);
   }
 }
 .btn-gradient-primary {
@@ -10057,10 +10058,10 @@ h3 {
 }
 .btn-gradient-primary:hover {
   color: #fff;
+  background-position: -50%;
+  border: 0;
   background-image: linear-gradient(135deg, #4679e5, #1c51c3);
   background-repeat: repeat-x;
-  border: 0;
-  background-position: -50%;
 }
 .btn-gradient-primary:focus, .btn-gradient-primary.focus {
   color: #fff;
@@ -10072,8 +10073,8 @@ h3 {
 .btn-gradient-primary.disabled, .btn-gradient-primary:disabled {
   color: #fff;
   background-color: #2561e0;
-  border: 0;
   background-image: none;
+  border: 0;
 }
 .btn-gradient-primary:not(:disabled):not(.disabled):active, .btn-gradient-primary:not(:disabled):not(.disabled).active, .show > .btn-gradient-primary.dropdown-toggle {
   color: #fff;
@@ -10093,10 +10094,10 @@ h3 {
 }
 .btn-gradient-secondary:hover {
   color: #fff;
+  background-position: -50%;
+  border: 0;
   background-image: linear-gradient(135deg, #7f8890, #5a6268);
   background-repeat: repeat-x;
-  border: 0;
-  background-position: -50%;
 }
 .btn-gradient-secondary:focus, .btn-gradient-secondary.focus {
   color: #fff;
@@ -10108,8 +10109,8 @@ h3 {
 .btn-gradient-secondary.disabled, .btn-gradient-secondary:disabled {
   color: #fff;
   background-color: #6c757d;
-  border: 0;
   background-image: none;
+  border: 0;
 }
 .btn-gradient-secondary:not(:disabled):not(.disabled):active, .btn-gradient-secondary:not(:disabled):not(.disabled).active, .show > .btn-gradient-secondary.dropdown-toggle {
   color: #fff;
@@ -10129,10 +10130,10 @@ h3 {
 }
 .btn-gradient-success:hover {
   color: #fff;
+  background-position: -50%;
+  border: 0;
   background-image: linear-gradient(135deg, #65bc69, #409444);
   background-repeat: repeat-x;
-  border: 0;
-  background-position: -50%;
 }
 .btn-gradient-success:focus, .btn-gradient-success.focus {
   color: #fff;
@@ -10144,8 +10145,8 @@ h3 {
 .btn-gradient-success.disabled, .btn-gradient-success:disabled {
   color: #fff;
   background-color: #4caf50;
-  border: 0;
   background-image: none;
+  border: 0;
 }
 .btn-gradient-success:not(:disabled):not(.disabled):active, .btn-gradient-success:not(:disabled):not(.disabled).active, .show > .btn-gradient-success.dropdown-toggle {
   color: #fff;
@@ -10165,10 +10166,10 @@ h3 {
 }
 .btn-gradient-info:hover {
   color: #fff;
+  background-position: -50%;
+  border: 0;
   background-image: linear-gradient(135deg, #cc83e9, #b043dd);
   background-repeat: repeat-x;
-  border: 0;
-  background-position: -50%;
 }
 .btn-gradient-info:focus, .btn-gradient-info.focus {
   color: #fff;
@@ -10180,8 +10181,8 @@ h3 {
 .btn-gradient-info.disabled, .btn-gradient-info:disabled {
   color: #fff;
   background-color: #be63e3;
-  border: 0;
   background-image: none;
+  border: 0;
 }
 .btn-gradient-info:not(:disabled):not(.disabled):active, .btn-gradient-info:not(:disabled):not(.disabled).active, .show > .btn-gradient-info.dropdown-toggle {
   color: #fff;
@@ -10201,10 +10202,10 @@ h3 {
 }
 .btn-gradient-warning:hover {
   color: #fff;
+  background-position: -50%;
+  border: 0;
   background-image: linear-gradient(135deg, #ff8e26, #d96800);
   background-repeat: repeat-x;
-  border: 0;
-  background-position: -50%;
 }
 .btn-gradient-warning:focus, .btn-gradient-warning.focus {
   color: #fff;
@@ -10216,8 +10217,8 @@ h3 {
 .btn-gradient-warning.disabled, .btn-gradient-warning:disabled {
   color: #fff;
   background-color: #ff7a00;
-  border: 0;
   background-image: none;
+  border: 0;
 }
 .btn-gradient-warning:not(:disabled):not(.disabled):active, .btn-gradient-warning:not(:disabled):not(.disabled).active, .show > .btn-gradient-warning.dropdown-toggle {
   color: #fff;
@@ -10237,10 +10238,10 @@ h3 {
 }
 .btn-gradient-danger:hover {
   color: #fff;
+  background-position: -50%;
+  border: 0;
   background-image: linear-gradient(135deg, #f6655a, #f22112);
   background-repeat: repeat-x;
-  border: 0;
-  background-position: -50%;
 }
 .btn-gradient-danger:focus, .btn-gradient-danger.focus {
   color: #fff;
@@ -10252,8 +10253,8 @@ h3 {
 .btn-gradient-danger.disabled, .btn-gradient-danger:disabled {
   color: #fff;
   background-color: #f44336;
-  border: 0;
   background-image: none;
+  border: 0;
 }
 .btn-gradient-danger:not(:disabled):not(.disabled):active, .btn-gradient-danger:not(:disabled):not(.disabled).active, .show > .btn-gradient-danger.dropdown-toggle {
   color: #fff;
@@ -10273,10 +10274,10 @@ h3 {
 }
 .btn-gradient-light:hover {
   color: #212529;
+  background-position: -50%;
+  border: 0;
   background-image: linear-gradient(135deg, white, #e2e6ea);
   background-repeat: repeat-x;
-  border: 0;
-  background-position: -50%;
 }
 .btn-gradient-light:focus, .btn-gradient-light.focus {
   color: #212529;
@@ -10288,8 +10289,8 @@ h3 {
 .btn-gradient-light.disabled, .btn-gradient-light:disabled {
   color: #212529;
   background-color: #f8f9fa;
-  border: 0;
   background-image: none;
+  border: 0;
 }
 .btn-gradient-light:not(:disabled):not(.disabled):active, .btn-gradient-light:not(:disabled):not(.disabled).active, .show > .btn-gradient-light.dropdown-toggle {
   color: #212529;
@@ -10309,10 +10310,10 @@ h3 {
 }
 .btn-gradient-dark:hover {
   color: #fff;
+  background-position: -50%;
+  border: 0;
   background-image: linear-gradient(135deg, #454d55, #23272b);
   background-repeat: repeat-x;
-  border: 0;
-  background-position: -50%;
 }
 .btn-gradient-dark:focus, .btn-gradient-dark.focus {
   color: #fff;
@@ -10324,8 +10325,8 @@ h3 {
 .btn-gradient-dark.disabled, .btn-gradient-dark:disabled {
   color: #fff;
   background-color: #343a40;
-  border: 0;
   background-image: none;
+  border: 0;
 }
 .btn-gradient-dark:not(:disabled):not(.disabled):active, .btn-gradient-dark:not(:disabled):not(.disabled).active, .show > .btn-gradient-dark.dropdown-toggle {
   color: #fff;
@@ -10363,9 +10364,9 @@ h3 {
 .btn-plastic.btn-gradient-primary:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-primary:active,
 .btn-plastic.btn-gradient-primary.active {
-  transition-duration: 0.2s;
   background-color: #1d54ca;
   box-shadow: 0 0 0;
+  transition-duration: 0.2s;
 }
 .btn-plastic.btn-primary:hover, .btn-plastic.btn-primary.hover, .btn-plastic.btn-primary:focus, .btn-plastic.btn-primary.focus,
 .btn-plastic.btn-outline-primary:hover,
@@ -10406,9 +10407,9 @@ h3 {
 .btn-plastic.btn-gradient-secondary:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-secondary:active,
 .btn-plastic.btn-gradient-secondary.active {
-  transition-duration: 0.2s;
   background-color: #5e666d;
   box-shadow: 0 0 0;
+  transition-duration: 0.2s;
 }
 .btn-plastic.btn-secondary:hover, .btn-plastic.btn-secondary.hover, .btn-plastic.btn-secondary:focus, .btn-plastic.btn-secondary.focus,
 .btn-plastic.btn-outline-secondary:hover,
@@ -10449,9 +10450,9 @@ h3 {
 .btn-plastic.btn-gradient-success:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-success:active,
 .btn-plastic.btn-gradient-success.active {
-  transition-duration: 0.2s;
   background-color: #439a46;
   box-shadow: 0 0 0;
+  transition-duration: 0.2s;
 }
 .btn-plastic.btn-success:hover, .btn-plastic.btn-success.hover, .btn-plastic.btn-success:focus, .btn-plastic.btn-success.focus,
 .btn-plastic.btn-outline-success:hover,
@@ -10492,9 +10493,9 @@ h3 {
 .btn-plastic.btn-gradient-info:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-info:active,
 .btn-plastic.btn-gradient-info.active {
-  transition-duration: 0.2s;
   background-color: #b349de;
   box-shadow: 0 0 0;
+  transition-duration: 0.2s;
 }
 .btn-plastic.btn-info:hover, .btn-plastic.btn-info.hover, .btn-plastic.btn-info:focus, .btn-plastic.btn-info.focus,
 .btn-plastic.btn-outline-info:hover,
@@ -10535,9 +10536,9 @@ h3 {
 .btn-plastic.btn-gradient-warning:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-warning:active,
 .btn-plastic.btn-gradient-warning.active {
-  transition-duration: 0.2s;
   background-color: #e06b00;
   box-shadow: 0 0 0;
+  transition-duration: 0.2s;
 }
 .btn-plastic.btn-warning:hover, .btn-plastic.btn-warning.hover, .btn-plastic.btn-warning:focus, .btn-plastic.btn-warning.focus,
 .btn-plastic.btn-outline-warning:hover,
@@ -10578,9 +10579,9 @@ h3 {
 .btn-plastic.btn-gradient-danger:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-danger:active,
 .btn-plastic.btn-gradient-danger.active {
-  transition-duration: 0.2s;
   background-color: #f22819;
   box-shadow: 0 0 0;
+  transition-duration: 0.2s;
 }
 .btn-plastic.btn-danger:hover, .btn-plastic.btn-danger.hover, .btn-plastic.btn-danger:focus, .btn-plastic.btn-danger.focus,
 .btn-plastic.btn-outline-danger:hover,
@@ -10621,9 +10622,9 @@ h3 {
 .btn-plastic.btn-gradient-light:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-light:active,
 .btn-plastic.btn-gradient-light.active {
-  transition-duration: 0.2s;
   background-color: #e6eaed;
   box-shadow: 0 0 0;
+  transition-duration: 0.2s;
 }
 .btn-plastic.btn-light:hover, .btn-plastic.btn-light.hover, .btn-plastic.btn-light:focus, .btn-plastic.btn-light.focus,
 .btn-plastic.btn-outline-light:hover,
@@ -10664,9 +10665,9 @@ h3 {
 .btn-plastic.btn-gradient-dark:not(:disabled):not(.disabled).active,
 .btn-plastic.btn-gradient-dark:active,
 .btn-plastic.btn-gradient-dark.active {
-  transition-duration: 0.2s;
   background-color: #262b2f;
   box-shadow: 0 0 0;
+  transition-duration: 0.2s;
 }
 .btn-plastic.btn-dark:hover, .btn-plastic.btn-dark.hover, .btn-plastic.btn-dark:focus, .btn-plastic.btn-dark.focus,
 .btn-plastic.btn-outline-dark:hover,
@@ -10687,14 +10688,4 @@ body {
 
 footer {
   background-color: #ced4da;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Lato, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  margin-top: 2rem;
 }
